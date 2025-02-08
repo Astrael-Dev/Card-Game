@@ -1,0 +1,161 @@
+#packs-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px; /* Reduce the gap between packs */
+    margin: 20px;
+    justify-content: center; /* Center the packs container */
+}
+
+.pack-item {
+    width: fit-content;
+    height: 400px;
+    border: 1px solid #888;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px #000;
+    background-color: #444; /* Dark background */
+    text-align: center; /* Center the content */
+    margin: 10px; /* Center the pack item */
+}
+
+.pack-item.origin {
+    background: linear-gradient(135deg, #04d0fb, #0417f0);
+}
+
+.pack-item.chaos {
+    background: linear-gradient(135deg, #1c0000, #c00404 );
+}
+
+.pack-item.tropical {
+    background: linear-gradient(135deg, #6cc356, #2a633a);
+}
+
+.pack-item h3 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center; /* Center the logo */
+}
+
+.pack-item h3 img {
+    width: 100px; /* Adjust the size of the logo */
+    height: auto;
+}
+
+.pack-item .card-back-image {
+    width: 100px; /* Adjust the size of the card back image */
+    height: auto;
+    margin: 10px 0; /* Add some margin for spacing */
+}
+
+.pack-item p {
+    margin: 5px 0;
+}
+
+.pack-item button {
+    margin-top: 10px;
+    font-weight: 800;
+    background-color: #4169E1; /* Royal Blue background */
+    color: #e0e0e0; /* Light text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.pack-item button:hover {
+    background-color: #5a8dee; /* Slightly lighter blue background on hover */
+    transform: scale(1.05);
+}
+
+#cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px;
+}
+
+.card {
+    width: 153px; /* Adjust the width to match the aspect ratio of 51x80mm */
+    height: 240px; /* Adjust the height to match the aspect ratio of 51x80mm */
+    perspective: 1000px;
+    position: relative; /* Ensure the rarity image is positioned correctly */
+    margin-bottom: 50px; /* Add margin to push the cards down */
+    margin-top: 50px; /* Add margin to push the cards up */
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px #000;
+    background-size: cover; /* Ensure the background image covers the entire card */
+}
+
+.card-front {
+    background-color: #333; /* Dark background */
+}
+
+.card-back {
+    background-color: #444; /* Dark background */
+    transform: rotateY(180deg);
+}
+
+.card-rarity {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: fit-content; /* Adjust width to fit content */
+    height: fit-content; /* Adjust height to fit content */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.8); /* Dark background with opacity */
+    transition: 0.5s; /* Smooth transition */
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+}
+
+.modal-content {
+    background-color: #333; /* Dark background */
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px #000;
+    transition: 0.5s; /* Smooth transition */
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}

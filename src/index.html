@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cardverse</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+        <link rel="icon" href="assets/images/cardverse-icon.png" type="image/x-icon">
+        <script src="assets/js/general/userModal.js"></script>
+        <script src="assets/js/general/MusicPlay.js"></script>
+        <charset="UTF-8">
+        <initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    </head>
+    <body>
+        <img class="gamelogo" src="assets/images/cardverse-logo.png" alt="logo">
+        <div class="buttonContainer">
+            <button id="playLoginButton" onclick="checkAccount()">Jouer</button>
+            <button id="playMusicButton" onclick="toggleMusic()">
+                <img src="assets/images/icone-son.png" alt="Play Music" class="sound-icon">
+            </button>
+        </div>
+
+        <div id="userModal" class="user-modal">
+            <div class="user-modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <p>Entrez votre nom d'utilisateur:</p>
+                <input type="text" id="username" name="username">
+                <button onclick="saveUsername()">Enregistrer</button>
+            </div>
+        </div>
+    </body>
+</html>

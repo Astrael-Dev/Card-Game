@@ -1,0 +1,99 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Start off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.5s;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding-top: 60px;
+    z-index: 1000; /* Ensure the sidebar is on top */
+}
+
+.sidebar.open {
+    left: 0; /* Slide in */
+}
+
+.sidebar img.gamelogo {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.sidebar .buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.sidebar .buttonContainer button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #4169E1;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sidebar .buttonContainer button img.sound-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.sidebar .buttonContainer button:hover {
+    background-color: #ffffff;
+    color: black;
+    transform: scale(1.1);
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    padding: 8px 16px;
+    text-align: center;
+}
+
+.sidebar nav ul li a {
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #575757;
+    border-radius: 12px;
+    transform: scale(1.1);
+}
+
+.sidebar-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 10px;
+    transition: 0.3s;
+    z-index: 1001; /* Ensure the button is on top */
+}
+
+.sidebar-toggle:hover {
+    background-color: #575757;
+}

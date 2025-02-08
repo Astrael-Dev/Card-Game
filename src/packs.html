@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cardverse</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/sidebar.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/cards.css">
+    <link rel="icon" href="assets/images/cardverse-icon.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <script defer src="assets/js/general/MusicPlay.js"></script>
+    <script defer src="assets/js/general/Sidebar.js"></script>
+    <script defer src="assets/js/packs/OriginPack.js"></script>
+    <script defer src="assets/js/packs/ChaosPack.js"></script>
+    <script defer src="assets/js/packs/TropicalPack.js"></script>
+    <script defer src="assets/js/general/packItems.js"></script>
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <img class="gamelogo" src="assets/images/cardverse-logo.png" alt="logo">
+        <div class="buttonContainer">
+            <button id="playMusicButton" onclick="toggleMusic()">
+                <img src="assets/images/icone-son.png" alt="Play Music" class="sound-icon">
+            </button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="packs.html">Packs</a></li>
+                <li><a href="collection.html">Collection</a></li>
+                <li><a href="sell.html">Ventes de cartes</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main-content">
+        <div id="user-info">
+            <h2 id="username">Nom d'utilisateur</h2>
+            <p id="user-money" style="color: green;">$1000</p>
+        </div>
+        <div id="packs-container">
+            <!-- Les packs seront générés ici par JavaScript -->
+        </div>
+    </div>
+
+    <!-- Modal pour afficher les cartes achetées -->
+    <div id="cardsModal" class="modal">
+        <div class="modal-content">
+            <div id="cards-container">
+                <!-- Les cartes achetées seront affichées ici -->
+            </div>
+        </div>
+        <span class="close" onclick="closeModal()">&times;</span>
+    </div>
+    <audio id="modalSound" src="assets/sons/modal-soundeffect.mp3"></audio>
+    <button class="sidebar-toggle" id="sidebarToggle" onclick="toggleSidebar()">☰</button>
+</body>
+</html>

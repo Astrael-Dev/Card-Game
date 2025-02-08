@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cardverse</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/collection.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/sidebar.css">
+    <link rel="icon" href="assets/images/cardverse-icon.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <img class="gamelogo" src="assets/images/cardverse-logo.png" alt="logo">
+        <div class="buttonContainer">
+            <button id="playMusicButton" onclick="toggleMusic()">
+                <img src="assets/images/icone-son.png" alt="Play Music" class="sound-icon">
+            </button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="packs.html">Packs</a></li>
+                <li><a href="collection.html">Collection</a></li>
+                <li><a href="sell.html">Ventes de cartes</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main-content">
+        <h1>Collection</h1>
+        <div class="collection" id="originCollection">
+            <div class="collection-logo">
+                <img src="assets/images/packlogo/originlog.png" alt="Origin Pack Logo">
+            </div>
+            <div class="cards-container" id="originCards">
+                <!-- Cards will be dynamically added here -->
+            </div>
+        </div>
+        <div class="collection" id="chaosCollection">
+            <div class="collection-logo">
+                <img src="assets/images/packlogo/chaoslogo.png" alt="Chaos Pack Logo">
+            </div>
+            <div class="cards-container" id="chaosCards">
+                <!-- Cards will be dynamically added here -->
+            </div>
+        </div>
+        <div class="collection" id="tropicalCollection">
+            <div class="collection-logo">
+                <img src="assets/images/packlogo/tropicallogo.png" alt="Tropical Pack Logo">
+            </div>
+            <div class="cards-container" id="tropicalCards">
+                <!-- Cards will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/packs/OriginPack.js"></script>
+    <script src="assets/js/packs/ChaosPack.js"></script>
+    <script src="assets/js/packs/TropicalPack.js"></script>
+    <script src="assets/js/collection/collectionManager.js"></script>
+    <script src="assets/js/general/Sidebar.js"></script>
+    <script src="assets/js/general/MusicPlay.js"></script>
+    <button class="sidebar-toggle" id="sidebarToggle" onclick="toggleSidebar()">☰</button>
+</body>
+</html>
