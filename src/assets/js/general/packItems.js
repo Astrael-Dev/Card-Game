@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     packItem.className = `pack-item ${pack.class || ""}`;
     const buyButton = document.createElement("button");
     buyButton.innerText = "Acheter";
-    buyButton.addEventListener(click, () => {
+    buyButton.addEventListener("click", () => {
       buyPack(
         "${pack.name}",
         pack.price,
@@ -149,4 +149,3 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(`Added ${cardData.name} from ${packName} to the collection.`);
   }
 });
-
